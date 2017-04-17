@@ -585,3 +585,18 @@ ReadRtout <- function(pathOutdir, pathDomfile, mskvar="basn_msk", basid=1, ncore
    }
    outDT
  }
+ 
+ #' Read in WRF-Hydro route link file
+ #' 
+ #' \code{ReadRouteLink} is simply a usage of format.
+ #' @param linkFile Full path to route link file
+ #' @return Dataframe of route link data
+ #' @keywords IO
+ #' @concept dataGet
+ #' @family modelDataReads
+ #' @export
+ ReadRouteLink <- function(linkFile) {
+   rtLinks <- GetNcdfFile(linkFile, variables=c("time"), exclude=TRUE, quiet=TRUE)
+   rtLinks$site_no <- stringr::str_trim(rtLinks$gages)
+   rtLinks
+ }
