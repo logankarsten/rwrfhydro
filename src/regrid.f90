@@ -44,7 +44,7 @@ integer, intent(inout)             :: ier
 integer*8 :: i, rSrc, cSrc, rDst, cDst
 real*8 :: indTmp1, indTmp2, wghtTmp
 
-print*, "REGRIDDING DATA >>>>>>>>>>>>"
+!print*, "REGRIDDING DATA >>>>>>>>>>>>"
 do i=1,fctLen
    indTmp1 = factorIndexList(1,i)
    indTmp2 = factorIndexList(2,i)

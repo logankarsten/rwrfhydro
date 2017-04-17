@@ -77,7 +77,6 @@ GetSnodasDepthSweDate <- function(datePOSIXct, outputDir='.', overwrite=FALSE,
     Sys.chmod(c(depthFile0, sweFile0), mode='0777', use_umask=FALSE)
     
     setwd(origDir)
-    TRUE
   }
   
   ## FormalsToDf handles vector arguments and passes collated combos 
